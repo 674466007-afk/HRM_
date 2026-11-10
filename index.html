@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaokhwan Wongwean - HR Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neutral: {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                            950: '#0a0a0a',
+                        },
+                        sand: {
+                            50: '#fdfbf7',
+                            100: '#f7f4ee',
+                            200: '#eae4d9',
+                            800: '#4a443b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-sand-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 transition-colors duration-300">
+
+    <!-- 1. Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full bg-sand-50/80 dark:bg-neutral-950/80 backdrop-blur-md z-50 border-b border-neutral-200/60 dark:border-neutral-800/60 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Name -->
+                <a href="#hero" class="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+                    Khaokhwan W.
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 text-xs tracking-wider uppercase font-medium text-neutral-500 dark:text-neutral-400">
+                    <a href="#about" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Projects</a>
+                    <a href="#experience" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Experience</a>
+                    <a href="#certifications" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Certifications</a>
+                    <a href="#contact" class="hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-3">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="theme-toggle" class="p-2 rounded-full border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors" aria-label="Toggle Theme">
+                        <i id="theme-toggle-dark-icon" class="w-4 h-4 hidden" data-lucide="moon"></i>
+                        <i id="theme-toggle-light-icon" class="w-4 h-4 hidden" data-lucide="sun"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-neutral-600 dark:text-neutral-400 focus:outline-none">
+                        <i data-lucide="menu" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-sand-50 dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800 px-6 pt-2 pb-4 space-y-3 text-sm">
+            <a href="#about" class="mobile-link block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">About</a>
+            <a href="#skills" class="mobile-link block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Skills</a>
+            <a href="#projects" class="mobile-link block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Projects</a>
+            <a href="#experience" class="mobile-link block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Experience</a>
+            <a href="#certifications" class="mobile-link block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Certifications</a>
+            <a href="#contact" class="mobile-link block text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="hero" class="pt-36 pb-24 max-w-5xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+        <div class="space-y-6 text-center md:text-left flex-1">
+            <div class="inline-block px-3 py-1 rounded-full text-xs font-normal tracking-wide text-neutral-600 dark:text-neutral-400 border border-neutral-300 dark:border-neutral-800 bg-sand-100 dark:bg-neutral-900">
+                Open for Internship & HR Roles
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-neutral-900 dark:text-neutral-100 leading-tight">
+                ข้าวขวัญ วงแหวน
+            </h1>
+            
+            <p class="text-base text-neutral-600 dark:text-neutral-400 font-light">
+                นักศึกษาชั้นปีที่ 3 สาขาการจัดการทรัพยากรมนุษย์ <br />
+                <span class="text-neutral-800 dark:text-neutral-200 font-normal">HR Generalist / Talent Acquisition / HRD</span>
+            </p>
+
+            <p class="text-xs sm:text-sm text-neutral-400 dark:text-neutral-500 italic font-light max-w-md">
+                "Bridging organizational goals with employee happiness & growth."
+            </p>
+
+            <!-- CTA Buttons & Social -->
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                <a href="https://drive.google.com/..." target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-neutral-900 dark:bg-neutral-100 hover:bg-neutral-800 dark:hover:bg-neutral-200 text-white dark:text-neutral-900 text-xs font-medium tracking-wide transition-all">
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    Resume (PDF)
+                </a>
+                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-800 hover:bg-neutral-100 dark:hover:bg-neutral-900 text-neutral-700 dark:text-neutral-300 text-xs font-medium tracking-wide transition-all">
+                    ติดต่อฉัน
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center justify-center md:justify-start gap-5 pt-2 text-neutral-400 dark:text-neutral-500">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                </a>
+                <a href="mailto:khaokhwan108@email.com" class="hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Avatar / Minimal Placeholder Graphic -->
+        <div class="relative flex-shrink-0">
+            <div class="w-48 h-48 sm:w-60 sm:h-60 rounded-full border border-neutral-200 dark:border-neutral-800 bg-sand-100 dark:bg-neutral-900 flex flex-col items-center justify-center p-6 text-neutral-400 dark:text-neutral-600">
+                <i data-lucide="user" class="w-16 h-16 stroke-[1.25]"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Me Section -->
+    <section id="about" class="py-20 border-t border-neutral-200/60 dark:border-neutral-800/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-medium mb-12">01 / About Me</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Education -->
+                <div class="space-y-3">
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">01.1</span>
+                    <h3 class="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wide">ประวัติการศึกษา</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                        นักศึกษาชั้นปีที่ 3 สาขาการจัดการทรัพยากรมนุษย์ <br />
+                        <span class="text-neutral-800 dark:text-neutral-300 font-normal">มหาวิทยาลัยราชภัฏนครปฐม</span>
+                    </p>
+                </div>
+
+                <!-- Career Goals -->
+                <div class="space-y-3">
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">01.2</span>
+                    <h3 class="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wide">เป้าหมายอาชีพ</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                        มุ่งมั่นในการเรียนรู้กระบวนการสรรหาและพัฒนาบุคลากร สนใจการนำข้อมูล (People Data) มาปรับปรุงประสบการณ์ของพนักงานในองค์กร
+                    </p>
+                </div>
+
+                <!-- HR Philosophy -->
+                <div class="space-y-3">
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">01.3</span>
+                    <h3 class="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wide">แนวคิดการทำงาน</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light italic">
+                        "เชื่อว่า HR คือพันธมิตรทางธุรกิจที่ช่วยขับเคลื่อนองค์กรผ่านการรับฟัง และส่งเสริมศักยภาพของคน"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. HR Skills & Competencies Section -->
+    <section id="skills" class="py-20 border-t border-neutral-200/60 dark:border-neutral-800/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-medium mb-12">02 / Skills & Competencies</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- HR Hard Skills -->
+                <div class="space-y-4">
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-neutral-800 dark:text-neutral-200">HR Hard Skills</h3>
+                    <ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Recruitment & Selection</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Onboarding Design</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Employee Engagement</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Basic Labor Law</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> HRD</li>
+                    </ul>
+                </div>
+
+                <!-- Data & Tools -->
+                <div class="space-y-4">
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-neutral-800 dark:text-neutral-200">Data & Tools</h3>
+                    <ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> MS Excel (Pivot, VLOOKUP)</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Power BI (Basic)</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Google Forms</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Canva</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Notion</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="space-y-4">
+                    <h3 class="text-xs font-semibold uppercase tracking-wider text-neutral-800 dark:text-neutral-200">Soft Skills</h3>
+                    <ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-400 font-light">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Active Listening</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Empathy</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Communication</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Team Facilitation</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-neutral-400"></span> Conflict Resolution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Projects & Case Studies Section -->
+    <section id="projects" class="py-20 border-t border-neutral-200/60 dark:border-neutral-800/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-medium mb-12">03 / Case Studies</h2>
+
+            <div class="space-y-12">
+                <!-- Project 1 -->
+                <div class="group grid grid-cols-1 md:grid-cols-4 gap-6 items-start pb-8 border-b border-neutral-200/40 dark:border-neutral-800/40">
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">Academic Project</span>
+                    <div class="md:col-span-3 space-y-3">
+                        <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">Onboarding & Training Program Design</h3>
+                        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                            ออกแบบหลักสูตรการปฐมนิเทศพนักงานใหม่ 3 วัน พร้อมระบบติดตามผล 90 วัน ในรายวิชา HRD เพื่อเพิ่มความผูกพันและลดอัตราการลาออกของพนักงานใหม่ช่วงทดลองงาน
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono">Instructional Design</span>
+                            <span class="text-[10px] text-neutral-400 font-mono">•</span>
+                            <span class="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono">Canva</span>
+                            <span class="text-[10px] text-neutral-400 font-mono">•</span>
+                            <span class="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono">MS Word</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">Survey Analysis</span>
+                    <div class="md:col-span-3 space-y-3">
+                        <h3 class="text-base font-medium text-neutral-900 dark:text-neutral-100 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">Employee Engagement & Satisfaction Survey</h3>
+                        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                            ออกแบบแบบสำรวจและวิเคราะห์ข้อมูลความพึงพอใจของนักศึกษา 150 คน เพื่อเสนอแนวทางการจัดกิจกรรมชมรมและปรับปรุงกระบวนการสื่อสารภายใน
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono">Google Forms</span>
+                            <span class="text-[10px] text-neutral-400 font-mono">•</span>
+                            <span class="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono">MS Excel</span>
+                            <span class="text-[10px] text-neutral-400 font-mono">•</span>
+                            <span class="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Activities & Experience Section -->
+    <section id="experience" class="py-20 border-t border-neutral-200/60 dark:border-neutral-800/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-medium mb-12">04 / Experience</h2>
+
+            <div class="space-y-10">
+                <!-- Item 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">2567</span>
+                    <div class="md:col-span-3 space-y-1">
+                        <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100">หัวหน้าฝ่ายสวัสดิการและดูแลทีมงาน</h3>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light">ค่ายอาสามหาวิทยาลัย</p>
+                        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light pt-2">
+                            ดูแลเรื่องการจัดสรรอาหาร สวัสดิการ และประสานงานทีมงานค่ายกว่า 50 คน บริหารจัดการทรัพยากรและแก้ไขปัญหาเฉพาะหน้า
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">2566</span>
+                    <div class="md:col-span-3 space-y-1">
+                        <h3 class="text-sm font-medium text-neutral-900 dark:text-neutral-100">ผู้ดำเนินรายการและฝ่ายจัดกิจกรรม</h3>
+                        <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light">งานรับน้องสาขา</p>
+                        <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light pt-2">
+                            ออกแบบกิจกรรม Ice-breaking และ Team Building สร้างความสัมพันธ์ที่ดีในหมู่นักศึกษาใหม่ เสริมสร้างบรรยากาศการทำงานเป็นทีม
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Certifications Section -->
+    <section id="certifications" class="py-20 border-t border-neutral-200/60 dark:border-neutral-800/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-medium mb-12">05 / Certifications</h2>
+
+            <div class="space-y-6 max-w-2xl">
+                <div class="flex items-baseline justify-between border-b border-neutral-200/40 dark:border-neutral-800/40 pb-4">
+                    <h3 class="text-xs font-medium text-neutral-800 dark:text-neutral-200">Foundations of Everyday Leadership</h3>
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">Coursera</span>
+                </div>
+                <div class="flex items-baseline justify-between border-b border-neutral-200/40 dark:border-neutral-800/40 pb-4">
+                    <h3 class="text-xs font-medium text-neutral-800 dark:text-neutral-200">HR Analytics & People Metrics</h3>
+                    <span class="text-xs text-neutral-400 dark:text-neutral-500 font-mono">Chula MOOC</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Contact & Footer Section -->
+    <section id="contact" class="py-20 border-t border-neutral-200/60 dark:border-neutral-800/60">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-medium mb-12">06 / Contact</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Info -->
+                <div class="space-y-6">
+                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
+                        หากคุณกำลังมองหานักศึกษาฝึกงาน หรือร่วมงานในสายงาน HR ที่พร้อมเรียนรู้และมุ่งมั่น ติดต่อฉันได้ตามช่องทางนี้ค่ะ
+                    </p>
+
+                    <div class="space-y-3 pt-2 text-xs">
+                        <div>
+                            <span class="text-neutral-400 block font-mono text-[10px] uppercase tracking-wider">Email</span>
+                            <a href="mailto:khaokhwan108@email.com" class="text-neutral-800 dark:text-neutral-200 font-normal hover:underline">khaokhwan108@email.com</a>
+                        </div>
+                        <div>
+                            <span class="text-neutral-400 block font-mono text-[10px] uppercase tracking-wider">Phone</span>
+                            <a href="tel:0937290919" class="text-neutral-800 dark:text-neutral-200 font-normal hover:underline">093-729-0919</a>
+                        </div>
+                        <div>
+                            <span class="text-neutral-400 block font-mono text-[10px] uppercase tracking-wider">LinkedIn</span>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-neutral-800 dark:text-neutral-200 font-normal hover:underline">linkedin.com/in/yourprofile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Minimal Form -->
+                <form onsubmit="event.preventDefault(); alert('ขอบคุณสำหรับข้อความ!');" class="space-y-4">
+                    <div>
+                        <input type="text" placeholder="ชื่อของคุณ" required class="w-full px-0 py-2 border-b border-neutral-300 dark:border-neutral-800 bg-transparent text-xs text-neutral-800 dark:text-neutral-100 focus:outline-none focus:border-neutral-800 dark:focus:border-neutral-200 transition-colors" />
+                    </div>
+                    <div>
+                        <input type="email" placeholder="อีเมล" required class="w-full px-0 py-2 border-b border-neutral-300 dark:border-neutral-800 bg-transparent text-xs text-neutral-800 dark:text-neutral-100 focus:outline-none focus:border-neutral-800 dark:focus:border-neutral-200 transition-colors" />
+                    </div>
+                    <div>
+                        <textarea rows="3" placeholder="ข้อความ" required class="w-full px-0 py-2 border-b border-neutral-300 dark:border-neutral-800 bg-transparent text-xs text-neutral-800 dark:text-neutral-100 focus:outline-none focus:border-neutral-800 dark:focus:border-neutral-200 transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="px-6 py-2 bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 rounded-full text-xs font-medium tracking-wide hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors">
+                        ส่งข้อความ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200/60 dark:border-neutral-800/60 py-8 text-center text-[11px] text-neutral-400 font-light">
+        <p>© 2026 Khaokhwan Wongwean. Designed with Minimalist Aesthetics.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
